@@ -1,0 +1,20 @@
+{% extends "_base.html" %}
+
+{% block body %}
+<table>
+    <tr>
+        <th>№</th>
+        <th>Назва</th>
+        <th>Ціна</th>
+        <th>Інградієнти</th>
+
+    </tr>
+    {% for pizza in pizzas %}
+    <tr>
+        {% for item in pizza %}
+            <td>{{ item }}</td>
+        {% endfor %}
+    </tr>
+    {% endfor %}
+</table>
+{% endblock body %}
